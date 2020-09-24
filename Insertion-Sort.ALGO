@@ -1,8 +1,7 @@
 ALGORITHM sort-inser
 VAR
-    i,n,value:Integer;
+    i,j,n,value:Integer;
     tab : ARRAY_OF INTEGER[50];
-    
 BEGIN
     Write ('give array length')
     Read(n)
