@@ -1,0 +1,21 @@
+ALGORITHM sort-inser
+VAR
+    i,n,value:Integer;
+    tab : ARRAY_OF INTEGER[50];
+    
+BEGIN
+    Write ('give array length')
+    Read(n)
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        Read(tab[i])
+    END_FOR
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        value:=tab[i];
+        j:=i;
+        WHILE (j>0) and (tab[j-1]>value) DO
+            swap(tab[j-1],tab[j]);              
+            j:=j-1;
+        END_WHILE
+        tab[j]:=value;
+    END_FOR
+END
